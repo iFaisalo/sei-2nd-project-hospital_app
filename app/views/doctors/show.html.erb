@@ -1,0 +1,27 @@
+<h1>Dr. <%= @doctor.name %>'s' in-patients</h1>
+
+<%= link_to "Admit New Patient", admit_new_patient_path(:doctor_id => @doctor.id), {:class => "button waves-effect wave-light btn"}%>
+
+<br/>
+
+<table>
+    <tr>
+        <th>MRN</th>
+        <th>Patient's Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Admission Date</th>
+        <th>Bed No.</th>
+    </tr>
+
+    <% @patients.each do |patient| %>
+        <tr>
+            <th><%= patient.mrn %></th>
+            <th><%= patient.name %></th>
+            <th><%= patient.age %></th>
+            <th><%= patient.gen %></th>
+            <th><%= patient.created_at.strftime("%d-%m-%Y") %></th>
+            <th><%= patient.bed_no %></th>
+        </tr>
+    <% end %>
+</table>

@@ -1,0 +1,18 @@
+<h1>All Physicians</h1>
+
+<table>
+    
+    <tr>
+        <th>Physician's Name</th>
+        <th>Department</th>
+        <th>Joining Date</th>
+    </tr>
+
+    <% @doctors.each do |doctor| %>
+        <tr>
+            <td>Dr. <%= link_to doctor.name, doctor_path(doctor) %></td>
+            <td><%= doctor.dep %></td>
+            <td><%= doctor.created_at.strftime("%b, %d %Y") %></td>
+        </tr>
+    <% end %>
+</table>

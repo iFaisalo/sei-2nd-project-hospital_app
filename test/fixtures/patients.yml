@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mrn: MyString
+  name: MyString
+  age: 1
+  gen: MyString
+  bed_no: MyString
+  doctor: one
+
+two:
+  mrn: MyString
+  name: MyString
+  age: 1
+  gen: MyString
+  bed_no: MyString
+  doctor: two
