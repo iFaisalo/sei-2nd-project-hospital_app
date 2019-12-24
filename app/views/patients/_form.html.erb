@@ -1,24 +1,28 @@
 <%= form_for @patient do |s| %>
 <%= s.hidden_field :doctor_id, :value => @doctor.id %>
-<div class="input-field col s6">
-<%= s.label :mrn, "MRN" %>
-<%= s.text_field :mrn %>
+<div class="column">
+    <form class="col s12">
+        <div class="input-field col s2">
+            <%= s.label :mrn, "MRN" %>
+            <%= s.text_field :mrn %>
+        </div>
+        <div class="input-field col s2">
+            <%= s.label :name, "Patient's Name" %>
+            <%= s.text_field :name %>
+        </div>
+        <div class="input-field col s2">
+            <%= s.label :age, "Age" %>
+            <%= s.text_field :age %>
+        </div>
+        <div class="input-field col s2">
+            <%= s.label :gen, "Gender" %>
+            <%= s.text_field :gen %>
+        </div>
+        <div class="input-field col s2">
+            <%= s.label :bed_no, "Bed No." %>
+            <%= s.text_field :bed_no %>
+        </div>
+    </form>
+    <%= s.submit "Submit", :class => "btn waves-effect waves-light"%>
 </div>
-<div class="input-field col s6">
-<%= s.label :name, "Patient's Name" %>
-<%= s.text_field :name %>
-</div>
-<div class="input-field col s6">
-<%= s.label :age, "Age" %>
-<%= s.text_field :age %>
-</div>
-<div class="input-field col s6">
-<%= s.label :gen, "Gender" %>
-<%= s.text_field :gen %>
-</div>
-<div class="input-field col s6">
-<%= s.label :bed_no, "Bed No." %>
-<%= s.text_field :bed_no %>
-</div>
-<%= s.submit "Submit", :class => "btn waves-effect waves-light"%>
 <% end %>

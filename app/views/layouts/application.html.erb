@@ -5,11 +5,37 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <header>
+    <div class="container">
+    <nav>
+    <div class="nav-wrapper">
+      <div class="brand-logo">Hospital App</div>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/Users/ifaisalo/Documents/sei-10/ruby/hospital_app/app/views/doctors/index.html.erb"><i class="small material-icons">home</i></a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+  </header>
 
-  <body>
+  <body style="background-color:#e8f5e9">
     <%= yield %>
   </body>
+  <footer>
+          <div class="footer-copyright">
+            <div class="container">  
+            <p class="grey-text right">< / > <span style="color:red">♥</span> by iFaisalo.</p>
+            </div>
+          </div>
+  </footer>
+  <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>
