@@ -1,6 +1,7 @@
-<h1>Dr. <%= @doctor.name %>'s' in-patients</h1>
+<h1>Dr. <%= @doctor.name %>'s in-patients</h1>
 
-<%= link_to "Admit New Patient", admit_new_patient_path(:doctor_id => @doctor.id), {:class => "button waves-effect wave-light btn"}%>
+<%= link_to "Admit New Patient", patients_new_path(:doctor_id => @doctor.id), {:class => "button waves-effect wave-light btn"} %>
+
 
 <br/>
 

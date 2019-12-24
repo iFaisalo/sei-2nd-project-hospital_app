@@ -1,0 +1,11 @@
+<%= form_for @doctor do |n| %>
+<div class="input-field col s6">
+<%= n.label :name, "Physician's Name" %>
+<%= n.text_field :name %>
+</div>
+<div class="input-field col s6">
+<%= n.label :dep, "Physician's Department" %>
+<%= n.text_field :dep %>
+</div>
+<%= n.submit "Submit", :class => "btn waves-effect waves-light"%>
+<% end %>
