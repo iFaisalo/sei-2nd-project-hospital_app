@@ -1,11 +1,8 @@
 <div class="container">
 <p class="flow-text">Dr. <%= @doctor.name %>'s in-patients</p>
-
-<%= link_to "Admit New Patient", patients_new_path(:doctor_id => @doctor.id), {:class => "button waves-effect wave-light btn"} %>
 <%= link_to content_tag('i', 'add', class: 'small material-icons'), patients_new_path(:doctor_id => @doctor.id), data: {confirm:"Admit a new patient?"} %>
-
 <br/>
-
+<br/>
 <table class="highlight">
     <tr>
         <th>MRN</th>
