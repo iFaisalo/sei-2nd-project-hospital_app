@@ -11,5 +11,10 @@ class PatientsController < ApplicationController
         Patient.create(params.require(:patient).permit(:mrn, :name, :age, :gen, :bed_no, :doctor_id))
         redirect_to doctor
     end
+
+    def destroy
+        Patient.find(params[:id]).destroy
+        redirect_to patients_path
+    end
     
 end

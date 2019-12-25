@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'doctors#index'
-  resources :doctors
+  resources :doctors, :patients
 
   get "doctors", to: "doctors#index"
   get "doctors/:id", to: "doctors#show"
@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   patch "doctors", to: "doctors#update"
 
   delete "doctors/:id", to: "doctors#destroy"
-  
+  delete "patients/:id", to: "patients#destroy"
 end

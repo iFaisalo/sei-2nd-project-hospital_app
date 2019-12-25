@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>HospitalApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <header>
     <div class="container">
     <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper" style="background-color:#00695c">
       <div class="brand-logo">Hospital App</div>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><%= link_to content_tag('i', 'home', class: 'small material-icons'), root_path, data: {} %></li>
-        <li><%= link_to content_tag('i', 'person_pin_circle', class: 'small material-icons'), destroy_user_session_path, data: {confirm: "Are you sure you want to log out'?"}, method: :delete %></li>
+        <li><%= link_to content_tag('i', 'directions_walk', class: 'small material-icons'), destroy_user_session_path, data: {confirm: "Are you sure you want to log out'?"}, method: :delete %></li>
       </ul>
     </div>
   </nav>
   </div>
   </header>
 
-  <body style="background-color:#e8f5e9">
+  <body style="background-color:#e0f2f1">
     <%= yield %>
   </body>
+  
   <footer>
-          <div class="footer-copyright">
-            <div class="container">  
-            <p class="grey-text right">< / > <span style="color:red">♥</span> by iFaisalo.</p>
-            </div>
-          </div>
+    <div class="footer-copyright">
+      <div class="container">  
+        <p class="grey-text right">< / > <span style="color:red">♥</span> by iFaisalo.</p>
+      </div>
+    </div>
   </footer>
+
   <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>

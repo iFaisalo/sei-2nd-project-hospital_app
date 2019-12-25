@@ -33,5 +33,4 @@ class DoctorsController < ApplicationController
         redirect_to doctors_path
     end
     
-    
 end

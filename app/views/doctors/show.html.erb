@@ -1,19 +1,19 @@
 <div class="container">
-<p class="flow-text">Dr. <%= @doctor.name %>'s in-patients</p>
-<%= link_to content_tag('i', 'add', class: 'small material-icons'), patients_new_path(:doctor_id => @doctor.id), data: {confirm:"Admit a new patient?"} %>
-<br/>
-<br/>
-<table class="highlight">
-    <tr>
-        <th>MRN</th>
-        <th>Patient's Name</th>
-        <th>Age</th>
-        <th>Gender</th>
-        <th>Admission Date</th>
-        <th>Bed No.</th>
-    </tr>
+    <p class="flow-text">Dr. <%= @doctor.name %>'s in-patients</p>
+    <%= link_to content_tag('i', 'add', class: 'small material-icons'), patients_new_path(:doctor_id => @doctor.id), data: {confirm:"Admit a new patient?"} %>
+    <br/>
+    <br/>
+    <table class="highlight">
+        <tr>
+            <th>MRN</th>
+            <th>Patient's Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Admission Date</th>
+            <th>Bed No.</th>
+        </tr>
 
-    <% @patients.each do |patient| %>
+        <% @patients.each do |patient| %>
         <tr>
             <th><%= patient.mrn %></th>
             <th><%= patient.name %></th>
@@ -21,7 +21,8 @@
             <th><%= patient.gen %></th>
             <th><%= patient.created_at.strftime("%d-%m-%Y") %></th>
             <th><%= patient.bed_no %></th>
+            <td><%= link_to content_tag('i', 'clear', class: 'small material-icons'), patient, data: {confirm: "Are you sure you want to delete '#{patient.name}'?"}, method: :delete %></td>
         </tr>
-    <% end %>
-</table>
+        <% end %>
+    </table>
 </div>
