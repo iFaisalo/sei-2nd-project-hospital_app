@@ -1,24 +1,9 @@
-# README
+# Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello,
 
-Things you may want to cover:
+here you'll find my hospital app, built using Ruby on Rails framework ..
 
-* Ruby version
+am proud of what I made ..
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+hope I met the minimum requirements ..
